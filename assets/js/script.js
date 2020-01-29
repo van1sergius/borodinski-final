@@ -13979,12 +13979,19 @@ document.querySelector('.hamburger').addEventListener('click', function() {
     }
 })
 
-// $(document).ready(function() {
-// 	var loc = window.location.pathname;
-//     if (loc !== '/') {
-//         $('.nav__item').find('a').each(function() {
-//             $(this).toggleClass('nav__link--active', $(this).attr('href') ==    loc);
-//          });
-// }
+$(document).ready(function() {
+	var loc = window.location.pathname;
+    // if (loc !== '/') {
+    //     $('.nav__item').find('a').each(function() {
+    //         $(this).toggleClass('nav__link--active', $(this).attr('href') ==    loc);
+    //      });
 
-// })
+    // if (loc === '/portfolio.html') {
+    //     $('.header').addClass('header--portfolio');
+    //     $('.footer').addClass('footer--portfolio');
+    // }
+    
+    console.log(loc);
+}
+
+})

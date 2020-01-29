@@ -68,11 +68,10 @@ body {
     margin: 0 auto;
     min-width: 320px;
     font-size: 18px;
-    height: 2327px;
     line-height: 27px;
     font-family: "PT Sans Narrow", sans-serif;
     color: #000;
-    background-color: #242424;
+    background-color: #353535;
     z-index: -2;
 }
 
@@ -1866,6 +1865,10 @@ body {
     display: none;
 }
 
+.slick-slider * {
+    outline: none;
+}
+
 .slick-dots {
     margin: 0;
     padding: 0;
@@ -1875,7 +1878,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-index: 4;
+    z-index: 5;
     width: 130px;
     height: 10px;
     bottom: 0;
@@ -1917,7 +1920,7 @@ body {
 
 .reviews__slider > .slick-dots {
     left: 28px;
-    top: -2px;
+    top: -15px;
 }
 
 .reviews__slider > .slick-dots li {
@@ -1936,22 +1939,22 @@ body {
 .features {
     position: relative;
     margin-top: 41px;
-    height: 276px;
+    height: 315px;
     text-align: center;
     color: #fff;
     z-index: 4;
 }
 
 .features::after {
-    content: "";
     position: absolute;
+    display: block;
+    content: "";
+    top: 100%;
+    height: 40px;
     width: 100%;
-    height: 35%;
-    background: url("../img/triangle.svg") no-repeat bottom;
-    background-size: cover;
-    left: 0;
-    bottom: -86px;
-    z-index: -1;
+    background: url(../img/triangle-grey.svg) no-repeat center;
+    background-size: 100% 40px;
+    z-index: 2;
 }
 
 .features__image {
@@ -1980,14 +1983,7 @@ body {
     .features {
         margin-top: 43px;
         text-align: left;
-        height: 455px;
-    }
-
-    .features::after {
-        background-image: url("../img/SVG/tablet-triangle.svg");
-        bottom: -80px;
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
+        height: 485px;
     }
 
     .features__inner {
@@ -2034,11 +2030,6 @@ body {
         margin-top: 79px;
         height: 300px;
         text-align: center;
-    }
-
-    .features::after {
-        bottom: -100px;
-        height: 35%;
     }
 
     .features__inner {
@@ -2237,19 +2228,19 @@ body {
 
 .reviews {
     position: relative;
-    height: 232px;
+    height: 250px;
     background-color: #fff;
 }
 
 .reviews::after {
-    content: "";
     position: absolute;
+    display: block;
+    content: "";
+    top: 100%;
+    height: 40px;
     width: 100%;
-    height: 40%;
-    background: url("../img/triangle-white.svg") no-repeat bottom;
-    background-size: cover;
-    left: 0;
-    bottom: -88px;
+    background: url(../img/triangle-white.svg) no-repeat center;
+    background-size: 100% 40px;
     z-index: 1;
 }
 
@@ -2268,7 +2259,6 @@ body {
 .reviews__item {
     margin-left: auto;
     margin-right: auto;
-    height: 192px;
     position: relative;
     padding-top: 5px;
     padding-left: 65px;
@@ -2482,34 +2472,64 @@ body {
     }
 }
 
-.portfolio {
+.photo {
+    position: relative;
+    height: 100%;
     background-color: #fff;
 }
 
-.portfolio__inner {
-    padding-top: 31px;
+.photo::before {
+    position: absolute;
+    display: none;
+    content: "";
+    bottom: 100%;
+    height: 40px;
+    width: 100%;
+    background: url(../img/white-mask3.svg) no-repeat center;
+    background-size: 100% 40px;
+    z-index: 2;
 }
 
-.portfolio__headline {
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
+.photo::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 100%;
+    height: 40px;
+    width: 100%;
+    background: url(../img/triangle-white.svg) no-repeat center;
+    background-size: 100% 40px;
+    z-index: 2;
 }
 
-.portfolio__button {
+.photo__inner {
+    padding-top: 1px;
+    padding-bottom: 5%;
+}
+
+.photo__header {
     display: none;
 }
 
-.portfolio__list {
+.photo__headline {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.photo__button {
+    display: none;
+}
+
+.photo__list {
     margin-top: 30px;
 }
 
-.portfolio__item {
+.photo__item {
     margin-bottom: 30px;
 }
 
-.portfolio__image {
+.photo__image {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -2517,11 +2537,11 @@ body {
     text-align: center;
 }
 
-.portfolio__image > img {
+.photo__image > picture > img {
     width: 96.7%;
 }
 
-.portfolio__image--best-work::after {
+.photo__image--best-work::after {
     content: "";
     position: absolute;
     display: block;
@@ -2532,7 +2552,7 @@ body {
     bottom: 31px;
 }
 
-.portfolio__text {
+.photo__text {
     margin-left: auto;
     margin-right: auto;
     margin-top: -7px;
@@ -2542,18 +2562,18 @@ body {
     width: 87%;
 }
 
-.portfolio__author {
+.photo__author {
     font-weight: bold;
     font-size: 24px;
 }
 
-.portfolio__comment {
+.photo__comment {
     margin-top: 12px;
     margin-bottom: 15px;
     padding-right: 28px;
 }
 
-.portfolio__service-item {
+.photo__service-item {
     position: relative;
     display: inline-block;
     margin-right: 30px;
@@ -2563,11 +2583,11 @@ body {
     text-align: right;
 }
 
-.portfolio__service-item--scissors {
+.photo__service-item--scissors {
     width: 93px;
 }
 
-.portfolio__service-item--scissors::before {
+.photo__service-item--scissors::before {
     content: "";
     position: absolute;
     display: block;
@@ -2578,11 +2598,11 @@ body {
     top: 2px;
 }
 
-.portfolio__service-item--beard {
+.photo__service-item--beard {
     width: 88px;
 }
 
-.portfolio__service-item--beard::before {
+.photo__service-item--beard::before {
     content: "";
     position: absolute;
     display: block;
@@ -2592,12 +2612,12 @@ body {
     left: -11px;
 }
 
-.portfolio__service-item--mustache {
+.photo__service-item--mustache {
     padding-right: 10px;
     width: 82px;
 }
 
-.portfolio__service-item--mustache::before {
+.photo__service-item--mustache::before {
     content: "";
     position: absolute;
     display: block;
@@ -2608,27 +2628,195 @@ body {
 }
 
 @media (min-width: 768px) {
-    .portfolio {
+    .photo {
+        margin-top: -185px;
+        height: 1662px;
         background-color: white;
     }
 
-    .portfolio__item {
+    .photo::before {
+        display: block;
+    }
+
+    .photo__inner {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 65px;
+        width: 640px;
+    }
+
+    .photo__header {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    .photo__headline {
+        font-size: 40px;
+    }
+
+    .photo__button {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        margin-top: -10px;
+        padding: 10px;
+        width: 160px;
+        height: 50px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #e5ddd5;
+    }
+
+    .photo__button:hover {
+        border-color: #d5c9bd;
+    }
+
+    .photo__button:active {
+        -webkit-tap-highlight-color: transparent;
+        border-color: #d5c9bd;
+        background-color: #d5c9bd;
+        opacity: 0.3;
+    }
+
+    .photo__list {
+        margin-top: 38px;
+    }
+
+    .photo__item {
+        position: relative;
         display: -webkit-box;
         display: flex;
     }
 
-    .portfolio__image {
-        width: 50%;
+    .photo__image {
+        margin: 0;
+        width: 270px;
     }
 
-    .portfolio__text {
-        width: 50%;
+    .photo__image > picture img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .photo__image img {
+        width: 100%;
+    }
+
+    .photo__image--best-work::after {
+        left: 0;
+    }
+
+    .photo__text {
+        margin-top: 0;
+        padding-top: 42px;
+        padding-left: 50px;
+        width: 370px;
+    }
+
+    .photo__comment {
+        margin-top: 25px;
+        margin-bottom: auto;
+        padding-right: 50px;
+    }
+
+    .photo__service {
+        position: absolute;
+        bottom: 26px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .photo {
+        margin-top: -357px;
+        height: 1320px;
+    }
+
+    .photo::after {
+        display: none;
+    }
+
+    .photo__inner {
+        width: 960px;
+    }
+
+    .photo__list {
+        margin-top: 72px;
+        display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    .photo__item {
+        margin-top: 10px;
+        display: block;
+        width: 294px;
+    }
+
+    .photo__item:first-child {
+        margin-top: 0;
+        display: -webkit-box;
+        display: flex;
+        width: 960px;
+    }
+
+    .photo__item:first-child > .photo__image {
+        width: 480px;
+    }
+
+    .photo__item:first-child > .photo__text {
+        margin-top: 0;
+        padding-top: 136px;
+        padding-left: 39px;
+        padding-right: 85px;
+        width: 480px;
+        height: 487px;
+    }
+
+    .photo__item:first-child img {
+        width: 100%;
+    }
+
+    .photo__image--best-work::after {
+        display: none;
+        left: 164%;
+        bottom: 83%;
+    }
+
+    .photo__image > picture > img {
+        width: 294px;
+    }
+
+    .photo__text {
+        margin-top: -7px;
+        padding-top: 28px;
+        padding-left: 34px;
+        padding-right: 0px;
+        width: auto;
+        height: 247px;
+    }
+
+    .photo__comment {
+        padding-right: 31px;
+    }
+
+    .photo__service {
+        bottom: 14px;
     }
 }
 
 .footer {
     padding-top: 118px;
     background-color: #242424;
+}
+
+.footer--portfolio {
+    padding-top: 46px;
 }
 
 .contacts {
@@ -2915,11 +3103,257 @@ body {
     }
 }
 
+.price {
+    position: relative;
+    padding-top: 47px;
+    padding-bottom: 15px;
+    color: #fff;
+    background-color: #353535;
+}
+
+.price::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 100%;
+    height: 40px;
+    width: 100%;
+    background: url(../img/triangle-grey.svg) no-repeat center;
+    background-size: 100% 40px;
+    z-index: 2;
+}
+
+.price__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    padding: 0 20px;
+}
+
+.price__headline {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.price__table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.price__item {
+    font-size: 20px;
+}
+
+.price__index {
+    display: none;
+}
+
+.price__service {
+    display: block;
+}
+
+.price__wash {
+    display: block;
+    margin-bottom: 11px;
+}
+
+.price__value {
+    vertical-align: top;
+    padding-left: 10px;
+    text-align: right;
+}
+
+.price__time {
+    margin-top: 14px;
+    margin-bottom: 0;
+    padding-top: 17px;
+    padding-right: 44px;
+    width: 100%;
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #484848;
+}
+
+.price__time--text {
+    position: relative;
+    display: inline-block;
+    width: 122px;
+    text-align: left;
+    left: 56px;
+}
+
+.price__time--text::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 58px;
+    height: 57px;
+    background: url("../img/clock.png") no-repeat center;
+    left: -92px;
+    top: -3px;
+}
+
+@media (min-width: 768px) {
+    .price {
+        padding-bottom: 55px;
+    }
+
+    .price::after {
+        display: none;
+    }
+
+    .price__inner {
+        max-width: 640px;
+        padding: 0;
+    }
+
+    .price__headline {
+        margin-bottom: 53px;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .price__table td {
+        height: 56px;
+        border: 1px solid #4a4a4a;
+    }
+
+    .price__index {
+        display: table-cell;
+        padding: 14px 19px;
+        width: 72px;
+        text-align: center;
+    }
+
+    .price__service {
+        display: table-cell;
+        padding-left: 20px;
+        width: 248px;
+    }
+
+    .price__wash {
+        display: table-cell;
+        padding-left: 20px;
+        width: 160px;
+    }
+
+    .price__wash--parentheses {
+        display: none;
+    }
+
+    .price__value {
+        vertical-align: middle;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .price__time {
+        margin-top: 6px;
+        padding: 0;
+        padding-top: 41px;
+        padding-left: 82px;
+        height: 113px;
+    }
+
+    .price__time--text {
+        width: auto;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        left: 0;
+    }
+
+    .price__time--text::before {
+        width: 83px;
+        height: 83px;
+        background-image: url("../img/tablet-clock.png");
+        background-position: 10px 10px;
+        left: -168px;
+        top: -31px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .price {
+        margin-bottom: 15px;
+    }
+
+    .price__inner {
+        max-width: 960px;
+    }
+
+    .price__wrapper {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    .price__table {
+        width: 630px;
+    }
+
+    .price__time {
+        margin: 0;
+        padding-left: 0;
+        padding-top: 200px;
+        width: 270px;
+        height: 281px;
+    }
+
+    .price__time--text {
+        width: 135px;
+        font-size: 20px;
+        text-align: center;
+        text-transform: none;
+        font-weight: normal;
+    }
+
+    .price__time--text::before {
+        background-image: url("../img/desktop-clock.png");
+        width: 160px;
+        height: 160px;
+        left: -12px;
+        top: -175px;
+    }
+}
+
+.form {
+    width: 320px;
+    height: 1600px;
+    background-color: #fff;
+}
+
+.form__header {
+    display: none;
+}
+
+.form__headline {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: none;
+}
+
 @media (min-width: 768px) {
     .header {
         height: 469px;
         background: url("../img/bg-tablet.jpg") no-repeat center;
         background-color: #242424;
+    }
+
+    .header--portfolio {
+        background-position: center 0;
+        background-size: 100%;
     }
 
     .nav {
