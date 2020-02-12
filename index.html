@@ -40,9 +40,9 @@
             <div class="nav__inner">
     
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="/" class="nav__link"><span class="nav__link-text">Главная</span></a></li>
-                    <li class="nav__item"><a href="/portfolio.html" class="nav__link nav__link--active"><span class="nav__link-text">Наши работы</span class="nav__link-text"></a></li>
-                    <li class="nav__item"><a href="/form.html" class="nav__link"><span class="nav__link-text">Записаться</span></a></li>
+                    <li class="nav__item"><a href="/Borodinski-adaptive/" class="nav__link nav__link--active"><span class="nav__link-text">Главная</span></a></li>
+                    <li class="nav__item"><a href="/Borodinski-adaptive/portfolio.html" class="nav__link"><span class="nav__link-text">Наши работы</span class="nav__link-text"></a></li>
+                    <li class="nav__item"><a href="/Borodinski-adaptive/form.html" class="nav__link"><span class="nav__link-text">Записаться</span></a></li>
                     <li class="nav__item"><a href="#" class="nav__link"><span class="nav__link-text">Контакты</span></a></li>
                     <li class="nav__item"><a href="#" class="nav__link"><span class="nav__link-text">Html academy</span></a></li>
                     <li class="nav__item"><a href="#" class="nav__link nav__link--login"><span class="nav__link-text">Вход</span></a></li>
@@ -59,7 +59,7 @@
     
             </div>
         </nav>
-     
+        
     </header>
 <main>
 
@@ -243,7 +243,7 @@
             <div class="footer__contacts contacts">
                 <b class="contacts__title">Барбершоп Бородинский</b>
     
-                <p class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная 19/8 <a class="contacts__phone" href="tel:+78125556666"><span>Тел.: </span>+7 (812) 555-66-66</a></p>
+                <p class="contacts__address"><span class="contacts__address-text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8 </span><a class="contacts__phone" href="tel:+78125556666"><span>Тел.: </span>+7 (812) 555-66-66</a></p>
     
                 
             </div>
@@ -297,6 +297,27 @@
             </div>
         </div>
     </footer>
+    <div class="signin__wrapper animated">
+        <form class="signin modal">
+            <div class="signin__inner">
+        
+        
+                <h2 class="signin__title">
+                    Личный кабинет
+                </h2>
+                <p class="signin__text">Введите свой логин и пароль, чтобы войти</p>
+                <input required type="text" class="signin__login" name="login" id="login" placeholder="Логин">
+                <input required type="password" class="signin__password" name="password" id="password" placeholder="Пароль">
+                <input type="checkbox" id="remember">
+                <label class="signin__remember" for="remember">Запомните меня</label>
+                <a href="#" class="signin__forget"><span class="signin__forget--text">Я забыл пароль!</span></a>
+                <button class="signin__submit" type="submit">Войти <span class="signin__submit--full">в личный
+                        кабинет</span></button>
+                <button class="signin__close">Закрыть</button>
+            </div>
+        </form>
+    </div>
+
 <script src="assets/js/script.js"></script>
 </body>
 </html>
